@@ -1,0 +1,45 @@
+<?php
+
+// This file is the contact us page. 
+// This script is begun in Chapter 8.
+
+// Require the configuration before any PHP code:
+require ('./includes/config.inc.php');
+
+// Include the header file:
+$page_title = 'We Are Nuts - Receipt';
+include ('./includes/header.html');
+
+// Require the database connection:
+require (MYSQL);
+?>
+
+<div class="box alt">
+	<div class="left-top-corner">
+   	<div class="right-top-corner">
+      	<div class="border-top"></div>
+      </div>
+   </div>
+   <div class="border-left">
+   	<div class="border-right">
+           	<div class="inner">
+			<h2>Order Receipt</h2>
+<p> Your Order Receipt will be Email to you shortly. </p>
+<!------------------------------------------------------------------------------------------------------->
+
+<!-------------------------------------------------------------------------------------------------------->
+</div>	
+      </div>
+   </div>
+   <div class="left-bot-corner">
+   	<div class="right-bot-corner">
+      	<div class="border-bot"></div>
+      </div>
+   </div>
+</div>
+<!-- box end -->
+
+<?php
+// Include the footer file:
+include ('./includes/footer.html');
+?>

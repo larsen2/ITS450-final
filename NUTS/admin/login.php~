@@ -1,0 +1,50 @@
+<?php
+
+// Require the configuration before any PHP code:
+require ('./includes/config.inc.php'); 
+
+// Require the database connection:
+require (MYSQL);
+
+if (mysqli_connect_errno())
+
+{
+
+echo “MySQLi Connection was not established: ” . mysqli_connect_error();
+
+}
+
+// checking the user
+
+if(isset($_POST['login'])){
+
+$user_id = mysqli_real_escape_string($_POST['user_id']);
+
+$password = mysqli_real_escape_string($_POST['password']);
+
+$sel_user = "SELECT * FROM users WHERE user_id='$user_id' AND password='$password'";
+
+$run_user = mysqli_query($sel_user);
+
+$check_user = mysqli_num_rows($run_user);
+
+if($check_user>0){
+
+$_SESSION['user']=$user;
+
+// Redirect the user.
+$location = 'https://' . BASE_URL . 'admin/index.php';
+	header("Location: $location");
+	exit();
+
+}
+
+else {
+
+echo '<script>alert('User name or password is not correct, try again!')</script>';
+
+}
+
+}
+
+?>

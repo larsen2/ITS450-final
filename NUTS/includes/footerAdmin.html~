@@ -1,0 +1,15 @@
+         </div>
+      </div>
+   </div>
+   <!-- footer -->
+   <div id="footer">
+      <div class="container">
+         <div class="indent">
+            <div class="fleft"> &copy; - We Are Nuts, Inc.    <a href="http://wearenuts.com/register.php">Admin Registration</a></div>
+            <div class="fright"><a href="http://wearenuts.com/newsletter.php">Subscribe to newsletter!</a></div>
+           
+         </div>
+      </div>
+   </div>
+</body>
+</html>

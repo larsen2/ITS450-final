@@ -1,0 +1,30 @@
+</div>
+      </div>
+   <!-- footer -->
+   <div id="footer">
+      <div class="container">
+         <div class="indent">
+            <div class="fleft"> &copy; - We Are Nuts, Inc.</div>
+         </div>
+      </div>
+   </div>
+<?php
+
+if (isset($_SESSION['user_id']))
+{
+  echo '<div id="success">';
+  echo 'login successful' . "      ";
+  echo $_SESSION['email'];
+  echo "      " . " Welcome Back " . $_SESSION['first_name'] . "  " . $_SESSION['last_name'] . "!          ";
+  echo '<ul><li><a href="logout.php" title="logout">Logout</a></li></ul>';
+  echo '</div>';
+}
+else //show login form
+{
+  require('includes/login_form.inc.php');
+    
+}
+
+?>
+</body>
+</html>
